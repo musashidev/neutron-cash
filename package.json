@@ -1,0 +1,60 @@
+{
+  "name": "neutron-cash-electron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Neutrino BCH wallet for desktop ",
+  "author": "musashidev",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.1.2",
+    "@grpc/proto-loader": "^0.5.5",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "electron-store": "^5.2.0",
+    "electron-updater": "^4.3.1",
+    "google-auth-library": "^6.0.5",
+    "qrcode.vue": "^1.7.0",
+    "vue": "^2.6.11",
+    "vuetify": "^2.3.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "electron": "^9.1.0",
+    "electron-devtools-installer": "^3.1.1",
+    "electron-icon-builder": "^1.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^1.19.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-electron-builder": "^2.0.0-rc.4",
+    "vue-cli-plugin-vuetify": "^2.0.7",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/musashidev/neutron-cash.git"
+  }
+}
