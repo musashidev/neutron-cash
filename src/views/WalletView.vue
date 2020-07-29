@@ -181,15 +181,15 @@ export default {
       updateBalance();
       updateCurrentAddress();
       updateTransactions();
-      if (that.tabs == 2) {
-        that.tabs = 1;
-      }
     }
     updateWalletInfo();
     let transactionNotifications = walletService.TransactionNotifications({});
     transactionNotifications.on("data", function(response) {
       updateExchangeRate();
       if (response.unmined_transaction_hashes.length > 0) {
+        if (that.tabs == 2) {
+          that.tabs = 1;
+        }
         updateWalletInfo();
       }
       response.attached_blocks.forEach(block => {
